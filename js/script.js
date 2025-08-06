@@ -105,7 +105,7 @@ async function showDailyQuote() {
       );
     }
 
-    dailyQuoteElement.innerHTML = ` <i class="ph ph-quotes"></i> ${dailyQuote.message}`;
+    dailyQuoteElement.textContent = `"${dailyQuote.message}"`;
     dailyAuthorElement.textContent = `- ${dailyQuote.author}`;
   } catch (error) {
     console.error("Error", error);
