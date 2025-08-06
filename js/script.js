@@ -91,7 +91,13 @@ async function showDailyQuote() {
 
     let dailyQuote;
 
-    if (storedQuote && storedQuote.date === today) {
+    if (
+      storedQuote &&
+      storedQuote.date === today &&
+      storedQuote.quote &&
+      storedQuote.quote.message &&
+      storedQuote.quote.author
+    ) {
       dailyQuote = storedQuote.quote;
     } else {
       const randomIndex = Math.floor(Math.random() * quotes.length);
