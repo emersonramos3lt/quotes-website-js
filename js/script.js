@@ -95,7 +95,12 @@ async function showDailyQuote() {
       dailyQuote = storedQuote.quote;
     } else {
       const randomIndex = Math.floor(Math.random() * quotes.length);
-      dailyQuote = quotes[randomIndex];
+      const randomQuote = quotes[randomIndex];
+
+      dailyQuote = {
+        message: randomQuote.quote,
+        author: randomQuote.author,
+      };
       localStorage.setItem(
         "dailyQuote",
         JSON.stringify({
@@ -105,7 +110,7 @@ async function showDailyQuote() {
       );
     }
 
-    dailyQuoteElement.textContent = `"${dailyQuote.message}"`;
+    dailyQuoteElement.innerHTML = `<i class="ph ph-quotes"></i> ${dailyQuote.message}`;
     dailyAuthorElement.textContent = `- ${dailyQuote.author}`;
   } catch (error) {
     console.error("Error", error);
