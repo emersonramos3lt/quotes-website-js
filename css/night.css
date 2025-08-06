@@ -1,0 +1,62 @@
+:root {
+  --bg: #111;
+  --input: #223649;
+}
+
+body.night {
+  background-color: var(--bg);
+  color: #ffffffea;
+}
+
+#themeSwitch {
+  all: unset;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+#themeSwitch:active {
+  animation: activeButton 0.2s ease-in-out 1;
+}
+
+@keyframes activeButton {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+#themeSwitch p {
+  font-size: 1.8rem;
+}
+
+#themeSwitch p:first-child {
+  display: none;
+}
+
+.night #themeSwitch p:last-child {
+  display: none;
+}
+
+.night #themeSwitch p:first-child {
+  display: block;
+}
+
+.night .input-search {
+  border: 1px solid #ffffffd8;
+  box-shadow: none;
+}
+
+@media (min-width: 700px) {
+  .input-search {
+    color: #111;
+  }
+}

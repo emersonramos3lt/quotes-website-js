@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Emerson Ramos" />
+    <meta
+      name="description"
+      content="Quote app that displays motivational phrases to help you live a better life."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Quotes App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/night.css" />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="./assets/favicon-light-mode.png"
+      type="image/x-icon"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="./assets/favicon-dark-mode.png"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!-- IMPORTS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="daily-quote-wrapper">
+        <div class="daily-quote">
+          <h2>Quote of the Day</h2>
+          <p class="daily-quote-text" data-daily-quote></p>
+          <span class="daily-quote-author" data-daily-author></span>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for quotes..."
+          data-search
+          class="input-search"
+        />
+        <label for="search"><i class="ph-bold ph-magnifying-glass"></i> </label>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper" data-container>
+        <template data-template>
+          <div class="card">
+            <p class="quote" data-quote></p>
+            <span class="author" data-author></span>
+          </div>
+        </template>
+      </div>
+    </main>
+
+    <button id="themeSwitch">
+      <p class="day"><i class="ph ph-sun"></i></p>
+      <p class="night"><i class="ph ph-moon-stars"></i></p>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/darkMode.js"></script>
+  </body>
+</html>
