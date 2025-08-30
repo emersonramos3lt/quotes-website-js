@@ -34,6 +34,15 @@ body {
   margin: 1rem 0;
 }
 
+.daily-quote h2 {
+  font-weight: 500;
+}
+
+.daily-quote-text {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
 .daily-quote-author {
   font-size: 0.875rem;
 }
@@ -118,4 +127,6 @@ label {
   .card {
     margin-bottom: 8rem;
   }
+
+  
 }
