@@ -128,4 +128,18 @@ label {
   .card {
     margin-bottom: 8rem;
   }
+
+  .daily-quote h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+.daily-quote-text {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.daily-quote-author {
+  font-size: 0.8rem;
+}
 }
